@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">classone</string>
+    <string name="inp">请输入摄氏度</string>
+    <string name="btn_dollar_label">Dollar</string>
+    <string name="btn_euro_label">Euro</string>
+    <string name="btn_won_label">Won</string>
+    <string name="rmb_hint">Input RMB</string>
 </resources>
