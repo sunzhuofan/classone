@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -54,6 +56,11 @@ public class RateActivity extends AppCompatActivity {
 
     public void openOne(View btn){
         //打开一个页面Activity
+        openConfig();
+
+    }
+
+    private void openConfig() {
         Intent config = new Intent(this,ConfigActivity.class);
         config.putExtra("dollar_rate_key",dollarRate);
         config.putExtra("euro_rate_key",euroRate);
@@ -67,7 +74,21 @@ public class RateActivity extends AppCompatActivity {
 
         //startActivity(config);
         startActivityForResult(config,1);
+    }
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.rate,menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId()==R.id.menu_set){
+            openConfig();
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
