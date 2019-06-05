@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:orientation="vertical"
+    tools:context=".FrameActivity">
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_main"
+        android:name="com.def.classone.HomeFragment"
+        android:layout_weight="10"/>
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_func"
+        android:name="com.def.classone.FuncFragment"
+        android:layout_weight="10"/>
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_setting"
+        android:name="com.def.classone.SettingFragment"
+        android:layout_weight="10"/>
+
+    <RadioGroup
+        android:id="@+id/bottomGroup"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_weight="0.5"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            style="@style/rg_btn_style"
+            android:drawableTop="@drawable/home"
+            android:id="@+id/radioHome"
+            android:text="@string/rdo_home_label"/>
+
+        <RadioButton
+            style="@style/rg_btn_style"
+            android:drawableTop="@drawable/panda"
+            android:id="@+id/radioFunc"
+            android:text="@string/rdo_func_label"/>
+
+        <RadioButton
+            style="@style/rg_btn_style"
+            android:drawableTop="@drawable/setting"
+            android:id="@+id/radioSetting"
+            android:text="@string/rdo_setting_label"/>
+
+    </RadioGroup>
+
+</LinearLayout>

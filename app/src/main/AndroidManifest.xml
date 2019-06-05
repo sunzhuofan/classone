@@ -34,7 +34,7 @@
         </activity>
         <activity android:name=".ConfigActivity" />
         <activity android:name=".RateListActivity" />
-        <activity android:name=".MyListActivity" >
+        <activity android:name=".MyListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -43,7 +43,16 @@
         </activity>
         <activity android:name=".MyList2Activity" />
         <activity android:name=".MyAdapter" />
-        <activity android:name=".RateCalcActivity" android:theme="@style/Base.Theme.AppCompat.Light.Dialog"></activity>
+        <activity
+            android:name=".RateCalcActivity"
+            android:theme="@style/Base.Theme.AppCompat.Light.Dialog" />
+        <activity android:name=".FrameActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
